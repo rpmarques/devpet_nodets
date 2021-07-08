@@ -27,3 +27,4 @@ tsc --init
 npm install express
 npm install mustache-express dotenv
 npm install --save-dev @types/express @types/mustache @types/node
+npm i --save-dev @types/mustache-express
