@@ -24,7 +24,6 @@ tsc --init
 "moduleResolution": "node",
 
 ###### BAIXAR DEPENDENCIAS #############
-npm install express
-npm install mustache-express dotenv
+npm install express mustache-express dotenv
 npm install --save-dev @types/express @types/mustache @types/node
 npm i --save-dev @types/mustache-express

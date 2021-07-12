@@ -16,5 +16,4 @@ router.get('/peixes', PageController.peixes);
 
 router.get('/procurar', SearchController.procurar);
 
-
 export default router;

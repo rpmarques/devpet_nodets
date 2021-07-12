@@ -26,6 +26,6 @@
     "@types/express": "^4.17.13",
     "@types/mustache": "^4.1.2",
     "@types/mustache-express": "^1.2.1",
-    "@types/node": "^16.0.1"
+    "@types/node": "^16.3.1"
   }
 }
