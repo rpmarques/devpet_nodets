@@ -20,6 +20,7 @@ server.use(express.static(path.join(__dirname,'../public')));
 
 //CONFIGURAR ROTAS
 server.use(mainRoutes); //PEGA TUDO QUE TA LA NO routes/index.ts
+
 server.use((req, res)=>{
     res.send('página não encontrada');
 });
@@ -27,4 +28,5 @@ server.use((req, res)=>{
 
 //RODA O SERVIDOR
 //env.PORT esta dentro do arquivo .env dentro de src
+//server.listen('4000'); 
 server.listen(process.env.PORT); 
