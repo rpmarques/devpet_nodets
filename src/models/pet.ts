@@ -3,13 +3,16 @@
 // FILTRAR POR TIPO
 // FILTRAR PELO NOME
 
-//CRIO UM TYPO PRA FICAR EXPLICITO QUE TIPODE DADOS VOU RECEBER
+//CRIO UM TIPO DE 
+type TipoPet = 'dog'|'cat'|'fish';
+type SexoPet = 'Masculino'|'Feminino'
+//CRIO UM TIPO PRA FICAR EXPLICITO QUE TIPODE DADOS VOU RECEBER
 type Pet ={
-    type: 'dog'|'cat'|'fish',
+    type: TipoPet,
     image: string,
     name: string,
     color: string,
-    sex: 'Masculino'|'Feminino'
+    sex: SexoPet
 };
 //CRIO O ARRAY COM ESSE TIPO DE DADOS 
 //const data:Pet []=[]
@@ -136,7 +139,29 @@ const data:Pet [] = [
 ]
 
 export const Pet = {
-    getAll:():Pet[]=>{
+    pegaTodos:():Pet[]=>{
         return data;
+    },
+
+    pegaPorTipo:(type:TipoPet):Pet[]=>{
+        //item aqui é a linha do array
+        return data.filter(item =>{
+            if (item.type === type){
+                return true;
+            }else{
+                return false
+            }
+        })
+    },
+
+    pegaPorNome: (nome:string): Pet[] =>{
+        return data.filter(item =>{
+            //indexOf RETORNA -1 SE NÃO ACHA NADA 
+            if (item.name.toLowerCase().indexOf(nome.toLowerCase()) > -1){
+                return true;
+            }else{
+                return false;
+            }
+        });
     }
 };
