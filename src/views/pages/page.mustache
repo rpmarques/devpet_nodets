@@ -1,6 +1,10 @@
 {{>partials/header}}
-<section class="banner" style="background-image: url('images/allanimals.jpg')">Todos os animais</section>
-<h2>Todos os animais disponíveis para adoção</h2>
+{{! if banner }}
+{{#banner}} 
+<section class="banner" style="background-image: url('images/{{ imagem_bg }}')">{{titulo}}</section>
+<h2>{{titulo}} disponíveis para adoção</h2>
+{{/banner}}
+{{! FIM if banner }}
 
 <div class="container list">
     <div class="item">
@@ -10,4 +14,5 @@
         <div class="item--genre">Gênero: Masculino</div>
     </div>
 </div>
+
 {{>partials/footer}}
