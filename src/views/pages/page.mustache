@@ -19,4 +19,11 @@
     {{ /lista }}
 </div>
 
+{{! SÓ EXECUTA SE FOR FALSO }}
+{{^lista}}
+    <div class="container no-list">
+        <h2> SEM DADOS PARA EXIBIR</h2>
+    </div>
+{{/lista}}
+
 {{>partials/footer}}
